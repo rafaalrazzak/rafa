@@ -47,29 +47,30 @@ export default function Home({ posts, locale, availableLocales }) {
         </Parallax>
       </div>
       <div className="flex w-full flex-col">
-        
-          <div className="flex w-full flex-wrap pb-2">
-            <Parallax y={25} className="flex flex-wrap">
-              <Card
-                title={t('common:learning')}
-                description={t('learning:description')}
-                href={'/learning'}
-                className="py-4 md:px-4"
-              />
-              <Card
-                title={t('common:about')}
-                description={t('common:about-description')}
-                href={'/about'}
-                className="py-4 md:px-4"
-              />
-            </Parallax>
-          
-          <div className="divide-y divide-transparent py-6 md:px-4">
+        <div className="flex w-full flex-wrap pb-2">
+          <Parallax y={25} className="flex flex-wrap">
+            <Card
+              title={t('common:learning')}
+              description={t('learning:description')}
+              href={'/learning'}
+              className="py-4 md:px-4"
+            />
+
+            <Card
+              title={t('common:about')}
+              description={t('common:about-description')}
+              href={'/about'}
+              className="py-4 md:px-4"
+            />
+          </Parallax>
+
+          <div className="w-full divide-y divide-transparent py-6 md:px-4">
             <Parallax y="15">
               <h1 className="text-2xl font-bold text-secondary-900 dark:text-secondary-100">
                 {t('common:latest-article')}
               </h1>
             </Parallax>
+
             {!posts.length && 'No posts found.'}
             {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
               const { slug, date, title, summary, tags } = frontMatter
@@ -77,7 +78,7 @@ export default function Home({ posts, locale, availableLocales }) {
                 <Parallax
                   y={15}
                   key={slug}
-                  className="w-full group rounded-lg transition-all duration-300 ease-in-out hover:bg-secondary-300/30 dark:hover:bg-secondary-600/30"
+                  className="group w-full rounded-lg transition-all duration-300 ease-in-out hover:bg-secondary-300/30 dark:hover:bg-secondary-600/30"
                 >
                   <div className="w-full transition-all duration-1000 ease-in-out group-hover:p-4">
                     <ul>
