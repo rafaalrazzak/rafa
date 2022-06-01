@@ -13,14 +13,14 @@ export default function NowPlaying() {
       {data?.isPlaying && data?.songUrl && (
         <SongImage src={data.songImage} alt={`${data.title} - ${data.artist}`} size={20} />
       )}
-      {data?.isPause && data?.songUrl && <FaPauseCircle className="text-spotify-green" />}
+      {data?.isPause && data?.songUrl && <FaPauseCircle className="text-spotify" />}
       {data?.isPlaying && data?.songUrl && <MusicEqualizer />}
       {!data?.isPlaying && !data?.isPause && !data?.songUrl && (
-        <FaSpotify className="text-spotify-green" />
+        <FaSpotify className="text-spotify" />
       )}
       {data?.songUrl ? (
         <Link
-          className="hover:text-spotify-green truncate text-sm transition-all sm:text-sm"
+          className="truncate text-sm transition-all hover:text-spotify sm:text-sm"
           href={data.songUrl}
           title={data.title}
         >

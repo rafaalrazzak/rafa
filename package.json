@@ -13,6 +13,7 @@
     "create-blog": "node ./scripts/compose.js"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.6",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@react-three/fiber": "^7.0.18",
@@ -21,6 +22,7 @@
     "esbuild": "^0.14.11",
     "framer-motion": "^6.3.1",
     "github-slugger": "^1.4.0",
+    "graphql": "^16.5.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.1",
     "javascript-time-ago": "^2.3.13",
@@ -36,6 +38,7 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^9.0.0",
+    "react-markdown": "^8.0.3",
     "react-spring": "^9.4.1",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "^6.1.0",
