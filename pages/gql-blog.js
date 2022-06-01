@@ -5,7 +5,6 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import { FaGithub } from 'react-icons/fa'
 import TimeAgo from '@/components/TimeAgo'
 import ReadTime from '@/components/ReadTime'
 import Link from '@/components/Link'
@@ -18,7 +17,6 @@ import Tag from '@/components/Tag'
 import { BLOG } from '@/lib/gql/fetch'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
-import titleCase from '@/lib/utils/titleCase'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
 
