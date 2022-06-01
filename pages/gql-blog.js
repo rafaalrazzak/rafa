@@ -36,7 +36,7 @@ function useIsScrollTop() {
   return isTop
 }
 
-export default function Blog() {
+export default function GqlBlog() {
   const { loading, error, data } = useQuery(BLOG)
   const blogs = data?.blogs
   const { locale } = useRouter()
