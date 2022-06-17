@@ -3,8 +3,8 @@ name: Rafa Al Razzak
 occupation: Students at Al-Asiyah Vocational High School
 company: 📍 Bogor, Indonesia
 email: contact.rafaalrazzak@gmail.com
-twitter: rafaalrazzak
-instagram: rafaalrazzak
+twitter: https://twitter.com/rafaalrazzak
+instagram: https://instagram.com/rafa.ar.id
 github: https://github.com/raf-ar
 ---
 
