@@ -2,7 +2,6 @@ import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 
 const MobileNav = ({ navShow, onToggleNav }) => {
-
   return (
     <div className="sm:hidden">
       <div
@@ -25,7 +24,7 @@ const MobileNav = ({ navShow, onToggleNav }) => {
                 className="text-xl font-semibold leading-8 tracking-wide text-secondary-700 hover:text-black dark:text-secondary-300 dark:hover:text-white"
                 onClick={onToggleNav}
               >
-								{link.title}
+                {link.title}
               </Link>
             </div>
           ))}

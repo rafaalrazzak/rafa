@@ -2,59 +2,59 @@ const projectsData = [
   {
     title: 'PORTAL',
     description: 'Logo Design',
-    link: 'https://youtube.com/channel/UCQAn63ZnbmQ8b6KZhmIV03Q'
+    link: 'https://youtube.com/channel/UCQAn63ZnbmQ8b6KZhmIV03Q',
   },
   {
     title: 'Renaissance',
     description: 'Logo Design',
-    link: 'https://instagram.com/renaissance12_'
+    link: 'https://instagram.com/renaissance12_',
   },
   {
     title: 'Capriccioso',
-    description: 'Logo Design'
+    description: 'Logo Design',
   },
   {
     title: 'CLSY',
-    description: 'Logo Design'
+    description: 'Logo Design',
   },
   {
     title: 'RAF',
-    description: 'Logo Design'
+    description: 'Logo Design',
   },
   {
     title: 'Ambigram',
-    description: 'Logo Design'
+    description: 'Logo Design',
   },
   {
     title: 'Kasumi Yoshizawa',
-    description: 'Manipulation'
+    description: 'Manipulation',
   },
   {
     title: 'Keqing',
-    description: 'Manipulation'
+    description: 'Manipulation',
   },
   {
     title: 'YZ',
-    description:'Manipulation'
+    description: 'Manipulation',
   },
   {
     title: 'KKPF',
-    description: 'Manipulation'
+    description: 'Manipulation',
   },
   {
     title: 'RI 76',
-    description: 'Manipulation'
+    description: 'Manipulation',
   },
   {
     title: 'Van Gogh',
     description: 'Manipulation',
   },
   {
-    title: 'Flat Design'
+    title: 'Flat Design',
   },
   {
     title: 'UI',
-  }
+  },
 ]
 
 export default projectsData

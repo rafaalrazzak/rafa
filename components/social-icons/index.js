@@ -14,10 +14,10 @@ const components = {
   facebook: Facebook,
   instagram: Instagram,
   youtube: Youtube,
-  external_link: ExternalLink 
+  external_link: ExternalLink,
 }
 
-const SocialIcon = ({ kind,name, href, size = 8, className }) => {
+const SocialIcon = ({ kind, name, href, size = 8, className }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
@@ -32,7 +32,11 @@ const SocialIcon = ({ kind,name, href, size = 8, className }) => {
     >
       <span className="sr-only">{name ?? kind}</span>
       <SocialSvg
-        className={`${kind != 'external_link' ? `fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 w-${size}` : ` text-white w-${size}`}`}
+        className={`${
+          kind != 'external_link'
+            ? `fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 w-${size}`
+            : ` text-white w-${size}`
+        }`}
       />
     </a>
   )

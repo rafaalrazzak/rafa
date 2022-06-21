@@ -8,55 +8,58 @@
  layout: PostLayout
 ---
 
- ### If Condition
- Decision making (if conditions) is used to anticipate conditions that occur during the course of the program and determine what actions will be taken in accordance with the conditions.
- In python there are several statements/conditions including `if`, `else` and `elif` The `if` condition is used to execute code if the condition evaluates to true `True`.
- If the condition evaluates to false `False` then the `if` statement/condition will not be executed.
- Below is an example of using the if condition in Python
+### If Condition
 
- ``` python:condition-if.py
- #The if condition is a condition that will be executed by the program if it is true or TRUE
- value = 9 # if the condition is true / TRUE then the program will execute the command below
- if(value > 7):
-   print("Nine is greater than Seven") #True condition, Executed#if the condition is false/FALSE then the program will not execute the command below
- if(value > 10):
-   print("Nine is greater than ten") #False condition, then not executed
- ```
+Decision making (if conditions) is used to anticipate conditions that occur during the course of the program and determine what actions will be taken in accordance with the conditions.
+In python there are several statements/conditions including `if`, `else` and `elif` The `if` condition is used to execute code if the condition evaluates to true `True`.
+If the condition evaluates to false `False` then the `if` statement/condition will not be executed.
+Below is an example of using the if condition in Python
 
- ### If Else Condition
- Decision making (if else conditions) is not only used to determine what actions will be taken in accordance with the conditions, but also used to determine what actions will be taken/run if the conditions are not appropriate.
- In python there are several statements/conditions including `if`, `else` and `elif`
- The if condition is used to execute code if the condition evaluates to true.
- The if else condition is a condition where if the statement is true `True` then the code in the if will be executed, but if the value is `False` it will execute the code in `else`.
- Below is an example of using the if else condition in Python
+```python:condition-if.py
+#The if condition is a condition that will be executed by the program if it is true or TRUE
+value = 9 # if the condition is true / TRUE then the program will execute the command below
+if(value > 7):
+  print("Nine is greater than Seven") #True condition, Executed#if the condition is false/FALSE then the program will not execute the command below
+if(value > 10):
+  print("Nine is greater than ten") #False condition, then not executed
+```
 
- ``` python:condition-if-else.py
- #The if else condition is if the condition evaluates to TRUE then the if code will be executed, but if it is FALSE then the else code will be executed
- value = 3 # If the if statement is TRUE then the if will be executed, but if FALSE the else code will be executed.
- if(value > 7):
-   print("Congratulations you passed")
- else:
-    print("Sorry you didn't pass")
- ```
+### If Else Condition
 
- ### Elif's Condition
- Decision making (if elif condition) is a logical continuation / branching of the "if condition".  With elif we can create program code that will select several possibilities that can occur.  Almost the same as the "else" condition, the difference is that the "elif" condition can be many and not just one. Below is an example of using the elif condition in Python.
+Decision making (if else conditions) is not only used to determine what actions will be taken in accordance with the conditions, but also used to determine what actions will be taken/run if the conditions are not appropriate.
+In python there are several statements/conditions including `if`, `else` and `elif`
+The if condition is used to execute code if the condition evaluates to true.
+The if else condition is a condition where if the statement is true `True` then the code in the if will be executed, but if the value is `False` it will execute the code in `else`.
+Below is an example of using the if else condition in Python
 
- ``` python:elif.py
- #Examples of using the elif condition
- this_day = "Sunday"
- if(today == "Monday"):
-   print("I'm going to college")
- elif(today_== "Tuesday"):
-     print("I'm going to college")
- elif(today == "Wednesday"):
-     print("I'm going to college")
- elif(today == "Thursday"):
-     print("I'm going to college")
- elif(today_== "Friday"):
-     print("I'm going to college")
- elif(today_== "Saturday"):
-     print("I'm going to college")
- elif(today == "Sunday"):
-     print("I'm going on vacation")
- ````
+```python:condition-if-else.py
+#The if else condition is if the condition evaluates to TRUE then the if code will be executed, but if it is FALSE then the else code will be executed
+value = 3 # If the if statement is TRUE then the if will be executed, but if FALSE the else code will be executed.
+if(value > 7):
+  print("Congratulations you passed")
+else:
+   print("Sorry you didn't pass")
+```
+
+### Elif's Condition
+
+Decision making (if elif condition) is a logical continuation / branching of the "if condition". With elif we can create program code that will select several possibilities that can occur. Almost the same as the "else" condition, the difference is that the "elif" condition can be many and not just one. Below is an example of using the elif condition in Python.
+
+```python:elif.py
+#Examples of using the elif condition
+this_day = "Sunday"
+if(today == "Monday"):
+  print("I'm going to college")
+elif(today_== "Tuesday"):
+    print("I'm going to college")
+elif(today == "Wednesday"):
+    print("I'm going to college")
+elif(today == "Thursday"):
+    print("I'm going to college")
+elif(today_== "Friday"):
+    print("I'm going to college")
+elif(today_== "Saturday"):
+    print("I'm going to college")
+elif(today == "Sunday"):
+    print("I'm going on vacation")
+```

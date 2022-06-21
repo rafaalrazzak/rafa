@@ -1,4 +1,4 @@
-import Image from "@/components/Image";
+import Image from '@/components/Image'
 export default function SongImage({ alt, src, size }) {
   return (
     <Image
@@ -11,5 +11,5 @@ export default function SongImage({ alt, src, size }) {
       objectFit="cover"
       className="rounded-full"
     />
-  );
+  )
 }

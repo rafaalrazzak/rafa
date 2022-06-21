@@ -4,8 +4,11 @@ import projectsData from '@/data/projectsData'
 import ProjectCard from '@/components/ProjectCard'
 import { PageSEO } from '@/components/SEO'
 
-export async function getStaticProps({ locale, locales }) {
-  return { props: { locale, availableLocales: locales } }
+export async function getStaticProps({ locale, locales, data }) {
+  const data = projectsData.map((x) => {
+    return x
+  })
+  return { props: { locale, availableLocales: locales, data } }
 }
 
 export default function Projects({ locale, availableLocales }) {
@@ -25,15 +28,13 @@ export default function Projects({ locale, availableLocales }) {
           </h1>
         </div>
         <div className="container w-full py-12">
-          {projectsData.map((d) => (
-            <ProjectCard
-              key={d.title}
-              title={d.title}
-              description={d.description}
-              image={`https://res.cloudinary.com/raf-ar/image/upload/v1651409847/blog/projects/${d.title.toLowerCase()}.jpg`}
-              link={d.link}
-            />
-          ))}
+          <ProjectCard
+            key={data.title}
+            title={data.title}
+            description={data.description}
+            image={`https://res.cloudinary.com/raf-ar/image/upload/v1651409847/blog/projects/${data.title.toLowerCase()}.jpg`}
+            link={data.link}
+          />
         </div>
       </div>
     </>
