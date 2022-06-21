@@ -33,9 +33,9 @@ export default function AuthorLayout({ children, frontMatter, availableLocales }
             <div className="text-secondary-500 dark:text-secondary-400">{company}</div>
             <div className="flex space-x-3 py-6 px-4 md:py-0 md:px-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} size={5} />
-              <SocialIcon kind="github" href={github} size={5} />
-              <SocialIcon kind="instagram" href={instagram} size={5} />
-              <SocialIcon kind="twitter" href={twitter} size={5} />
+              <SocialIcon kind="github" href={`https://github.com/${github}`} size={5} />
+              <SocialIcon kind="instagram" href={`https://instagram.com/${instagram}`} size={5} />
+              <SocialIcon kind="twitter" href={`https://twitter.com/${twitter}`} size={5} />
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark md:col-span-2">{children}</div>

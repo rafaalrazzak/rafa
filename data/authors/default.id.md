@@ -3,9 +3,9 @@ name: Rafa Al Razzak
 occupation: Siswa di Sekolah Menengah Kejuruan Al-Asiyah
 company: 📍 Bogor, Indonesia
 email: contact.rafaalrazzak@gmail.com
-twitter: https://twitter.com/rafaalrazzak
-instagram: https://instagram.com/rafa.ar.id
-github: https://github.com/raf-ar
+twitter: rafaalrazzak
+instagram: rafa.ar.id
+github: raf-ar
 ---
 
 <h1 align="center"> Hai 👋, Saya Rafa Al Razzak </h1>
