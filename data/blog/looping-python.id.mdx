@@ -39,7 +39,7 @@ Pengulangan `for` pada Python memiliki kemampuan untuk mengulangi item dari urut
 
 Dibawah ini adalah contoh penggunaan pengulangan For Loop.
 
-```pyhton:for-loop.py
+```python:for-loop.py
 #Contoh pengulangan for sederhana
 angka = [1,2,3,4,5]
 for x in angka:
@@ -55,16 +55,16 @@ for makanan in buah:
 Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut.
 Dibawah ini adalah contoh penggunaan Nested Loop.
 
-```pyhton:nested-loop.py
+```python:nested-loop.py
 #Contoh penggunaan Nested Loop
 #Catatan: Penggunaan modulo pada kondisional mengasumsikan nilai selain nol sebagai True(benar) dan nol sebagai False(salah)
  i = 2
 while(i < 100):
  j = 2
  while(j <= (i/jeruk)):
- if not(i%j):
+  if not(i%j):
   break
- j = j + 1
- if (j > i/j) :
-  print(i, " is prime")       
+  j = j + 1
+  if (j > i/j) :
+   print(i, " is prime")       
 ```
