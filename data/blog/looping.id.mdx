@@ -1,8 +1,8 @@
 ---
-title: 'Looping'
+title: 'Looping Python'
 date: '2022-06-22T02:59:24.673Z'
 tags: ['python']
-draft: true
+draft: false
 summary: 'Perulangan dalam bahasa pemrograman Python '
 thumbnail: true
 layout: PostLayout
@@ -28,50 +28,44 @@ Dibawah ini adalah contoh penggunaan pengulangan While Loop.
 
 count = 0
 while (count < 9):
-    print ("The count is: ", count)
-        count = count + 1
+ print ("The count is: ", count)
+ count = count + 1
+ print ("Good bye!")
+```
 
-        print ("Good bye!")
-        ```
+### For Loop
 
-        ### For Loop
+Pengulangan `for` pada Python memiliki kemampuan untuk mengulangi item dari urutan apapun, seperti `list` atau `string`.
 
-        Pengulangan `for` pada Python memiliki kemampuan untuk mengulangi item dari urutan apapun, seperti `list` atau `string`.
+Dibawah ini adalah contoh penggunaan pengulangan For Loop.
 
-        Dibawah ini adalah contoh penggunaan pengulangan For Loop.
+```pyhton:for-loop.py
+#Contoh pengulangan for sederhana
+angka = [1,2,3,4,5]
+for x in angka:
+  print(x)
 
-        ```pyhton:for-loop.py
-        #Contoh pengulangan for sederhana
-        angka = [1,2,3,4,5]
-        for x in angka:
-            print(x)
+#Contoh pengulangan for
+buah = ["nanas", "apel", "jeruk"]
+for makanan in buah:
+  print ("Saya suka makan", makanan)
+````
 
-            #Contoh pengulangan for
-            buah = ["nanas", "apel", "jeruk"]
-            for makanan in buah:
-                print ("Saya suka makan", makanan)
-                ```
+### Nested Loop
+Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut.
+Dibawah ini adalah contoh penggunaan Nested Loop.
 
-                ### Nested Loop
-
-                Bahasa pemrograman Python memungkinkan penggunaan satu lingkaran di dalam loop lain. Bagian berikut menunjukkan beberapa contoh untuk menggambarkan konsep tersebut.
-
-                Dibawah ini adalah contoh penggunaan Nested Loop.
-
-                ```pyhton:nested-loop.py
-                #Contoh penggunaan Nested Loop
-                #Catatan: Penggunaan modulo pada kondisional mengasumsikan nilai selain nol sebagai True(benar) dan nol sebagai False(salah)
-
-                i = 2
-                while(i < 100):
-                    j = 2
-                        while(j <= (i/j)):
-                                if not(i%j): break
-                                        j = j + 1
-                                            if (j > i/j) : print(i, " is prime")
-                                                i = i + 1
-
-                                                print("Good bye!")
-                                                ```
-
+````pyhton:nested-loop.py
+#Contoh penggunaan Nested Loop
+#Catatan: Penggunaan modulo pada kondisional mengasumsikan nilai selain nol sebagai True(benar) dan nol sebagai False(salah)
+  i = 2
+while(i < 100):
+  j = 2
+while(j <= (i/j)):
+if not(i%j):
+  break
+j = j + 1
+if (j > i/j) :
+ print(i, " is prime")
+          
 ````
