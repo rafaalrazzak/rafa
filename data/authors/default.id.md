@@ -5,7 +5,7 @@ company: 📍 Bogor, Indonesia
 email: contact.rafaalrazzak@gmail.com
 twitter: rafaalrazzak
 instagram: rafa.ar.id
-github: raf-ar
+github: rafalrazzak
 ---
 
 <h1 align="center"> Hai 👋, Saya Rafa Al Razzak </h1>
