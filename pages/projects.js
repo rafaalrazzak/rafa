@@ -23,7 +23,7 @@ export default function Projects({ locale, availableLocales }) {
           {t('projects:title')}
         </h1>
       </div>
-      <div className="container flex gap-4 mx-auto flex-wrap">
+      <div className="container mx-auto flex flex-wrap gap-4">
         {projectsData.map((d) => (
           <ProjectCard
             key={d.title}

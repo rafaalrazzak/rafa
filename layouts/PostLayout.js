@@ -160,7 +160,7 @@ export default function PostLayout({
 
             <div className="divide-y divide-transparent xl:col-span-3 xl:row-span-2 xl:pb-0">
               {thumbnail && (
-                <div className="flex w-full rounded-xl overflow-hidden justify-center">
+                <div className="flex w-full justify-center overflow-hidden rounded-xl">
                   <CloudinaryImg
                     alt={`${title} - ${titleCase(`${tags[0]}`)}`}
                     id={blogImage}
@@ -170,10 +170,7 @@ export default function PostLayout({
               )}
               <div className="prose pt-10 pb-8 dark:prose-dark">{children}</div>
               <div className="inline-flex items-center pt-6 pb-6 text-sm text-secondary-700 dark:text-secondary-300">
-                <Link
-                  href={editUrl(fileName)}
-                  className="flex space-x-2 hover:text-primary-500"
-                >
+                <Link href={editUrl(fileName)} className="flex space-x-2 hover:text-primary-500">
                   <FaGithub size={20} />
                   <span>{t('common:github')}</span>
                 </Link>

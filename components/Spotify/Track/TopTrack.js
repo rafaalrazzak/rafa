@@ -5,7 +5,7 @@ import Parallax from '@/components/motion/Parallax'
 import fetcher from '@/lib/fetcher'
 export default function Tracks() {
   const { data } = useSWR('/api/top-tracks', fetcher)
-  
+
   if (!data) {
     return <NoTrack />
   }
@@ -17,7 +17,7 @@ export default function Tracks() {
           y={20}
           visibleOpacity={1}
           hiddenOpacity={0}
-          className="flex flex-wrap w-full md:w-1/2 px-4"
+          className="flex w-full flex-wrap px-4 md:w-1/2"
         >
           <Track
             title={track.title}

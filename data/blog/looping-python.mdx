@@ -8,63 +8,64 @@
  layout: PostLayout
 ---
 
- In general, statements in a programming language are executed sequentially.  The first statement in a function is executed first, followed by the second, and so on.  But there will be situations where you have to write a lot of code, where there is a lot of code.  If done manually then you will only waste energy by writing hundreds or even thousands of code.  For that you need to use repetition in the Python programming language.
+In general, statements in a programming language are executed sequentially. The first statement in a function is executed first, followed by the second, and so on. But there will be situations where you have to write a lot of code, where there is a lot of code. If done manually then you will only waste energy by writing hundreds or even thousands of code. For that you need to use repetition in the Python programming language.
 
- In the Python programming language, repetition is divided into 3 parts, namely:
+In the Python programming language, repetition is divided into 3 parts, namely:
 
- - While Loop
- - For Loop
- - Nested Loop
+- While Loop
+- For Loop
+- Nested Loop
 
- ### While Loop
+### While Loop
 
- While loop in Python, the statement is executed many times as long as the condition evaluates to true or `True`.
+While loop in Python, the statement is executed many times as long as the condition evaluates to true or `True`.
 
- Below is an example of using the While Loop loop.
+Below is an example of using the While Loop loop.
 
- ``` python:while-loop.py
- #Examples of using While Loop
- #Note: Scoping in Python can use tabs instead of brackets
+```python:while-loop.py
+#Examples of using While Loop
+#Note: Scoping in Python can use tabs instead of brackets
 
- count = 0
- while (count < 9):
-  print("The count is: ", count)
-  count = count + 1
-  print("Goodbye!")
- ```
+count = 0
+while (count < 9):
+ print("The count is: ", count)
+ count = count + 1
+ print("Goodbye!")
+```
 
- ### For Loop
+### For Loop
 
- Python's `for` loop has the ability to iterate over items of any order, such as `list` or `string`.
+Python's `for` loop has the ability to iterate over items of any order, such as `list` or `string`.
 
- Below is an example of using the For Loop loop.
+Below is an example of using the For Loop loop.
 
- ``` python:for-loop.py
- #A simple for loop example
- number = [1,2,3,4,5]
- for x in numbers:
-   print(x)
+```python:for-loop.py
+#A simple for loop example
+number = [1,2,3,4,5]
+for x in numbers:
+  print(x)
 
- #Example of repetition for
- fruit = ["pineapple", "apple", "orange"]
- for food in fruit:
-   print("I like to eat", food)
- ```
+#Example of repetition for
+fruit = ["pineapple", "apple", "orange"]
+for food in fruit:
+  print("I like to eat", food)
+```
 
- ### Nested Loop
- The Python programming language allows the use of one loop inside another loop.  The following sections show some examples to illustrate the concept.
- Below is an example of using Nested Loop.
+### Nested Loop
 
- ``` python:nested-loop.py
- #Examples of using Nested Loop
- #Note: Using modulo in conditionals assumes values ​​other than zero as True(true) and zero as False(false)
-   i = 2
- while(i < 100):
-   j = 2
- while(j <= (i/j)):
- if not(i%j):
-   break
- j = j + 1
- if (j > i/j):
-  print(i, " is prime")
- ```
+The Python programming language allows the use of one loop inside another loop. The following sections show some examples to illustrate the concept.
+Below is an example of using Nested Loop.
+
+```python:nested-loop.py
+#Examples of using Nested Loop
+#Note: Using modulo in conditionals assumes values ​​other than zero as True(true) and zero as False(false)
+  i = 2
+while(i < 100):
+  j = 2
+while(j <= (i/j)):
+if not(i%j):
+  break
+j = j + 1
+if (j > i/j):
+ print(i, " is prime")
+```
