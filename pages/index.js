@@ -9,7 +9,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import TimeAgo from '@/components/TimeAgo'
 import formatDate from '@/lib/utils/formatDate'
 import Hero from '@/components/Hero'
-import Card from '@/context/Card'
+import Card from '@/components/Card'
 import Track from '@/components/Spotify/Track'
 
 const MAX_DISPLAY = 3
