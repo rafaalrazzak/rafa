@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import dynamic from 'next/dynamic'
 import { RiArticleLine } from 'react-icons/ri'
 import Parallax from '@/components/motion/Parallax'
 import Link from '@/components/Link'
@@ -9,10 +8,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import TimeAgo from '@/components/TimeAgo'
 import formatDate from '@/lib/utils/formatDate'
-
-const Hero = dynamic(() => import('@/components/Hero'), { ssr: false })
-const Card = dynamic(() => import('@/components/Card'), { ssr: true })
-const Track = dynamic(() => import('@/components/Spotify/Track'), { ssr: true })
+import Hero from '@/components/Hero'
+import Card from '@/context/Card'
+import Track from '@/components/Spotify/Track'
 
 const MAX_DISPLAY = 3
 
