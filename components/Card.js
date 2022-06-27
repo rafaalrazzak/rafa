@@ -34,7 +34,7 @@ const Card = ({
       <div
         className={`rounded-xl ${
           onlyImg ? 'p-0.5' : 'p-0.5 dark:p-px'
-        } -z-10 h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500`}
+        } -z-10 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500`}
       >
         <Link href={href} aria-label={`Link to ${title}`}>
           <animated.div
@@ -61,11 +61,9 @@ const Card = ({
             )}
             {onlyImg && <>{children}</>}
             {!onlyImg && (
-              <div className="p-5">
-                <h1 className="mb-2 text-2xl font-bold leading-8 tracking-tight">{title}</h1>
-                <p className="prose mb-2 max-w-none text-secondary-500 dark:text-secondary-400">
-                  {description}
-                </p>
+              <div className="flex flex-col gap-2 p-5">
+                <h1 className=" text-2xl font-bold leading-8 tracking-tight">{title}</h1>
+                <p className="prose text-secondary-500 dark:text-secondary-400">{description}</p>
                 <div className="text-2xl font-thin leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                   <svg
                     className="rotate-180"
