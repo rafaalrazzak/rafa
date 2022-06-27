@@ -1,9 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { FaTwitter } from 'react-icons/fa'
-import Image from '@/components/Image'
 import CloudinaryImg from '@/components/CloudinaryImg'
 import Link from '@/components/Link'
-import { convertImage, toBase64 } from '@/lib/utils/imageBlur'
 
 export default function Author({ detail }) {
   const { t } = useTranslation()
