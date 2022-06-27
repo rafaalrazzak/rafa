@@ -64,7 +64,7 @@ export default function Home({ posts, locale, availableLocales }) {
             />
           </Parallax>
 
-          <div className="w-full divide-y divide-transparent py-12 md:px-4">
+          <div className="w-full divide-y divide-transparent py-6 md:px-4">
             <Parallax y="15">
               <h1 className="text-2xl font-bold text-secondary-900 dark:text-secondary-100">
                 {t('common:latest-article')}
@@ -152,6 +152,11 @@ export default function Home({ posts, locale, availableLocales }) {
             </Link>
           </div>
         )}
+        <Parallax y={10} visibleOpacity={1} hiddenOpacity={1}>
+          <h1 className=" flex justify-center text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+            My <span className="mx-1 text-spotify">Spotify</span> Top Song
+          </h1>
+        </Parallax>
         <Track />
       </div>
     </>

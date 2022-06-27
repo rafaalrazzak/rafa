@@ -5,19 +5,19 @@ import Parallax from '@/components/motion/Parallax'
 import fetcher from '@/lib/fetcher'
 export default function Tracks() {
   const { data } = useSWR('/api/top-tracks', fetcher)
-
+  
   if (!data) {
     return <NoTrack />
   }
   return (
     <>
-      {data.tracks.map((track) => (
+      {data.tracks.map((track, k) => (
         <Parallax
-          key={track.songUrl}
+          key={k}
           y={20}
           visibleOpacity={1}
           hiddenOpacity={0}
-          className="w-full"
+          className="flex flex-wrap w-full md:w-1/2 px-4"
         >
           <Track
             title={track.title}

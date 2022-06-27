@@ -19,6 +19,7 @@
     "@react-spring/three": "^9.4.5",
     "@react-three/fiber": "^7.0.18",
     "@react-three/postprocessing": "^2.0.5",
+    "cloudinary-react": "^1.8.0",
     "clsx": "^1.1.1",
     "esbuild": "^0.14.11",
     "framer-motion": "^6.3.1",

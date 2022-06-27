@@ -9,6 +9,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Author from '@/components/Author'
 import Image from '@/components/Image'
+import CloudinaryImg from '@/components/CloudinaryImg'
 import { BlogSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -42,7 +43,7 @@ export default function PostLayout({
   children,
 }) {
   const { slug, fileName, date, title, tags, readingTime, thumbnail } = frontMatter
-  const blogImage = `https://res.cloudinary.com/raf-ar/image/upload/v1650957837/blog/${tags[0]}.jpg`
+  const blogImage = `v1650957837/blog/${tags[0]}.jpg`
   const roundedRead = Math.round(readingTime)
   const { locale } = useRouter()
   const { t } = useTranslation()
@@ -159,20 +160,20 @@ export default function PostLayout({
 
             <div className="divide-y divide-transparent xl:col-span-3 xl:row-span-2 xl:pb-0">
               {thumbnail && (
-                <div className="flex w-full justify-center">
-                  <Image
+                <div className="flex w-full rounded-xl overflow-hidden justify-center">
+                  <CloudinaryImg
                     alt={`${title} - ${titleCase(`${tags[0]}`)}`}
-                    width="900"
-                    height="500"
-                    src={blogImage}
-                    className="rounded-xl"
+                    id={blogImage}
                     objectFit="cover"
                   />
                 </div>
               )}
               <div className="prose pt-10 pb-8 dark:prose-dark">{children}</div>
               <div className="inline-flex items-center pt-6 pb-6 text-sm text-secondary-700 dark:text-secondary-300">
-                <Link href={editUrl(fileName)} className="flex space-x-2 hover:text-primary-500">
+                <Link
+                  href={editUrl(fileName)}
+                  className="flex space-x-2 hover:text-primary-500"
+                >
                   <FaGithub size={20} />
                   <span>{t('common:github')}</span>
                 </Link>
