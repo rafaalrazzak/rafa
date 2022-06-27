@@ -64,7 +64,7 @@ export default function Home({ posts, locale, availableLocales }) {
             />
           </Parallax>
 
-          <div className="w-full divide-y divide-transparent py-6 md:px-4">
+          <div className="w-full divide-y divide-transparent py-12 md:px-4">
             <Parallax y="15">
               <h1 className="text-2xl font-bold text-secondary-900 dark:text-secondary-100">
                 {t('common:latest-article')}
