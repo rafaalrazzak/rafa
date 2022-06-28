@@ -2,6 +2,7 @@
   "name": "rafa",
   "version": "1.1.2",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
@@ -11,7 +12,8 @@
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts --dir context",
     "prepare": "husky install",
     "prettier": "prettier . -w",
-    "create-blog": "node ./scripts/compose.js"
+    "create-blog": "node ./scripts/compose.js",
+    "postbuild": "node ./scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.1.2",
@@ -36,6 +38,7 @@
     "next-translate": "^1.4.0",
     "next-transpile-modules": "^9.0.0",
     "postprocessing": "^6.28.1",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -80,7 +83,6 @@
     "lint-staged": "^13.0.3",
     "next-remote-watch": "^1.0.0",
     "postcss": "^8.4.14",
-    "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "socket.io": "^4.5.1",
     "socket.io-client": "^4.5.1",

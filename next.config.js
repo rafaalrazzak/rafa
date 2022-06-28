@@ -35,7 +35,7 @@ const nextConfig = {
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts', 'context'],
   },
-  
+
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
