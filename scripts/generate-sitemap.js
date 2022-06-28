@@ -1,8 +1,9 @@
-import fs from 'fs'
-import globby from 'globby'
-import prettier from 'prettier'
-import siteMetadata from '../data/siteMetadata'
-import i18nConfig from '../i18n.json'
+const fs = require('fs')
+const globby = require('globby')
+const prettier = require('prettier')
+const siteMetadata = require('../data/siteMetadata')
+const i18nConfig = require('../i18n.json')
+
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
   const pages = await globby([
