@@ -1,21 +1,24 @@
-import withBundleAnalyzer from 'next/bundle-analyzer'
-// ({
-//   enabled: process.env.ANALYZE === 'true',
-// })
+/**
+ * @type {import('next').NextConfig}
+ */
 
-import withPlugins from 'next-compose-plugins'
-import withTM from 'next-transpile-modules'
-// ([
-//   'three',
-//   'react-spring',
-//   '@react-spring/three',
-//   '@react-spring/web',
-//   '@react-three/fiber',
-//   '@react-three/postprocessing',
-//   '@react-three/drei',
-// ])
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-import nextTranslate from 'next-translate'
+const withPlugins = require('next-compose-plugins')
+
+const withTM = require('next-transpile-modules')([
+  'three',
+  'react-spring',
+  '@react-spring/three',
+  '@react-spring/web',
+  '@react-three/fiber',
+  '@react-three/postprocessing',
+  '@react-three/drei',
+])
+
+const nextTranslate = require('next-translate')
 
 const nextConfig = {
   compress: true,
@@ -32,6 +35,7 @@ const nextConfig = {
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts', 'context'],
   },
+  
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -53,4 +57,4 @@ const nextConfig = {
   },
 }
 
-export const withPlugins = ([[nextTranslate], [withBundleAnalyzer], [withTM]], nextConfig)
+module.exports = withPlugins([[nextTranslate], [withBundleAnalyzer], [withTM]], nextConfig)
