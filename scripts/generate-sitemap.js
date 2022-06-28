@@ -5,7 +5,7 @@ const siteMetadata = import('../data/siteMetadata')
 const i18nConfig = import('../i18n.json')
 
 ;(async () => {
-  const prettierConfig = await prettier.resolveConfig('./prettier.config.js')
+  const prettierConfig = await prettier.resolveConfig('prettier.config.js')
   const pages = await globby([
     'pages/*.js',
     'data/blog/**/*.mdx',
