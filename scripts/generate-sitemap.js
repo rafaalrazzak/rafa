@@ -1,8 +1,8 @@
-const fs = require('fs')
-const globby = require('globby')
-const prettier = require('prettier')
-const siteMetadata = require('../data/siteMetadata')
-const i18nConfig = require('../i18n.json')
+const fs = import('fs')
+const globby = import('globby')
+const prettier = import('prettier')
+const siteMetadata = import('../data/siteMetadata')
+const i18nConfig = import('../i18n.json')
 
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
