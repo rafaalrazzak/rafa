@@ -7,12 +7,12 @@ export default function ProjectCard({ title, description, image, link }) {
         <div className="z-11 translate-y-4 transform-gpu pb-5 text-xl transition duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
           <SocialIcon
             kind="external_link"
-            href={link ?? `/_next/image?url=${image}&w=1080&q=100`}
+            href={link}
             name={title}
             className="cursor-pointer opacity-60 transition duration-300 hover:opacity-100"
           />
-          <div className="font-bold">{title}</div>
-          <div className="text-sm opacity-60 ">{description}</div>
+          <h2 className="font-bold">{title}</h2>
+          <p className="text-sm opacity-60 ">{description}</p>
         </div>
       </div>
       <CloudinaryImg
