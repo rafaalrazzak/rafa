@@ -1,20 +1,21 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+import withBundleAnalyzer from 'next/bundle-analyzer'
+// ({
+//   enabled: process.env.ANALYZE === 'true',
+// })
 
-const withPlugins = require('next-compose-plugins')
+import withPlugins from 'next-compose-plugins'
+import withTM from 'next-transpile-modules'
+// ([
+//   'three',
+//   'react-spring',
+//   '@react-spring/three',
+//   '@react-spring/web',
+//   '@react-three/fiber',
+//   '@react-three/postprocessing',
+//   '@react-three/drei',
+// ])
 
-const withTM = require('next-transpile-modules')([
-  'three',
-  'react-spring',
-  '@react-spring/three',
-  '@react-spring/web',
-  '@react-three/fiber',
-  '@react-three/postprocessing',
-  '@react-three/drei',
-])
-
-const nextTranslate = require('next-translate')
+import nextTranslate from 'next-translate'
 
 const nextConfig = {
   compress: true,
@@ -52,4 +53,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPlugins([[nextTranslate], [withBundleAnalyzer], [withTM]], nextConfig)
+export const withPlugins = ([[nextTranslate], [withBundleAnalyzer], [withTM]], nextConfig)
