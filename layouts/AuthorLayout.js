@@ -1,13 +1,14 @@
 import useTranslation from 'next-translate/useTranslation'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
+import CloudinaryImg from '@/components/CloudinaryImg'
 import { PageSEO } from '@/components/SEO'
 import Card from '@/components/Card'
 
 export default function AuthorLayout({ children, frontMatter, availableLocales }) {
   const { name, occupation, company, email, twitter, instagram, github } = frontMatter
   const { t } = useTranslation()
-  let avatarDynamic = `https://res.cloudinary.com/raf-ar/image/upload/v1651370642/blog/avatars/${name.toLowerCase()}.jpg`
+  let avatarDynamic = `v1651370642/blog/avatars/${name.toLowerCase()}.jpg`
   return (
     <>
       <PageSEO
@@ -25,7 +26,7 @@ export default function AuthorLayout({ children, frontMatter, availableLocales }
           <div className="flex flex-col items-center rounded-2xl bg-secondary-500/10 p-2 text-center dark:bg-secondary-600/10 md:flex-row">
             <div>
               <Card onlyImg className="p-4">
-                <Image src={avatarDynamic} alt={name} objectFit="cover" layout="fill" />
+                <CloudinaryImg id={avatarDynamic} alt={name} objectFit="cover" className="w-15 h-15" />
               </Card>
             </div>
             <h1 className="py-2 text-2xl font-bold leading-8 tracking-tight">{name}</h1>

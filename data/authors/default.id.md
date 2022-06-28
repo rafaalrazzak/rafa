@@ -27,7 +27,7 @@ github: rafalrazzak
 
 ### Terhubung dengan saya:
 
-<div className="flex flex-wrap w-full items-center">
+<div className="flex flex-wrap w-full items-center justify-center">
 <a className="p-2" href="https://codepen.io/rafa_ar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="rafa_ar" height="30" width="30" /></a>
 <a className="p-2" href="https://dev.to/rafa_ar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="rafa_ar" height="30" width="30" /></a>
 <a className="p-2" href="https://twitter.com/rafaalrazzak" t
@@ -40,7 +40,7 @@ arget="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldk
 
 ### Bahasa dan Alat
 
-<div className="flex flex-wrap w-full items-center">
+<div className="flex flex-wrap w-full items-center justify-center">
 
 <a className="p-2"  href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="30" height="30"/> </a>
 
