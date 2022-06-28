@@ -26,6 +26,7 @@ specifiers:
   eslint-plugin-unused-imports: ^2.0.0
   file-loader: ^6.2.0
   framer-motion: ^6.3.16
+  fs: 0.0.1-security
   github-slugger: ^1.4.0
   globby: 13.1.2
   gray-matter: ^4.0.3
@@ -80,6 +81,7 @@ dependencies:
   clsx: 1.1.1
   esbuild: 0.14.47
   framer-motion: 6.3.16_biqbaboplfbrettd7655fr4n2y
+  fs: 0.0.1-security
   github-slugger: 1.4.0
   gray-matter: 4.0.3
   image-size: 1.0.1
@@ -4268,6 +4270,10 @@ packages:
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
+
+  /fs/0.0.1-security:
+    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==}
+    dev: false
 
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
