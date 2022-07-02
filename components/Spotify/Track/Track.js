@@ -11,8 +11,7 @@ export default function Track({ title, image, url, artist }) {
               alt={`${title} - ${artist}`}
               width="128"
               height="128"
-              className="transition-all duration-300 group-hover:scale-110"
-              objectFit="cover"
+              className="object-cover transition-all duration-300 group-hover:scale-110"
             />
           </div>
           <div className="relative flex w-full flex-col p-4 leading-relaxed">

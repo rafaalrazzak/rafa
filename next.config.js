@@ -8,7 +8,7 @@ const withTM = require('next-transpile-modules')([
   'three',
   'react-spring',
   '@react-spring/three',
-
+  '@react-spring/web',
   '@react-three/fiber',
   '@react-three/postprocessing',
   '@react-three/drei',

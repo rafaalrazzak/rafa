@@ -8,7 +8,6 @@ export default function SongImage({ alt, src, size }) {
       circleSize="w-5 h-5"
       width={size}
       height={size}
-      objectFit="cover"
       className="rounded-full"
     />
   )
