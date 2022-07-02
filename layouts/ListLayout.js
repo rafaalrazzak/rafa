@@ -25,7 +25,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   return (
     <>
       <div className="divide-y divide-transparent">
-        <div className="space-y-2 py-8 md:space-y-6 ">
+        <div className="space-y-2 pt-4 md:space-y-4 ">
           <h1 className="py-3 text-3xl font-extrabold leading-9 tracking-tight text-secondary-900 dark:text-secondary-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -52,9 +52,13 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               />
             </svg>
           </div>
+          {!filteredBlogPosts.length && (
+            <div className="flex flex-wrap truncate">
+              {t('common:no-search-result')}: "{searchValue}"
+            </div>
+          )}
         </div>
 
-        {!filteredBlogPosts.length && `No articles found for: "${searchValue}"`}
         {displayPosts.map((frontMatter) => {
           const { slug, date, title, summary, tags } = frontMatter
           return (
