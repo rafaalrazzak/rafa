@@ -1,7 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
 import { RiArticleLine } from 'react-icons/ri'
 import Hero from '@/components/Hero'
-import Card from '@/compomemts/Card'
+import Card from '@/components/Card'
 import Track from '@/components/Spotify/Track'
 import Parallax from '@/components/motion/Parallax'
 import Link from '@/components/Link'
