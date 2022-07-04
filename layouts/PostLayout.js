@@ -131,7 +131,7 @@ export default function PostLayout({
                 <dt className="sr-only">{t('common:pub')}</dt>
                 <dd className="flex items-center justify-center divide-x-2 divide-secondary-500 text-sm leading-6 text-secondary-500 dark:divide-secondary-400 dark:text-secondary-400">
                   {/* <TimeAgo datetime={date} className="px-2" locale={locale} /> */}
-                  <View locale={locale} value={6666} className="px-2" />
+                  <View locale={locale} value={666} className="px-2" />
                   <time className="px-2" dateTime={date}>
                     {formatDate(date, locale)}
                   </time>
