@@ -60,7 +60,7 @@ module.exports = {
         green: colors.emerald,
         yellow: colors.amber,
         purple: colors.violet,
-        'spotify': '#1DB954',
+        spotify: '#1DB954',
       },
       hueRotate: {
         53: '53deg',
@@ -107,11 +107,11 @@ module.exports = {
             code: {
               color: theme('colors.pink.500'),
               backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
-              borderRadius: '0.25rem',
+              paddingLeft: '6px',
+              paddingRight: '6px',
+              paddingTop: '4px',
+              paddingBottom: '4px',
+              borderRadius: '0.35rem',
             },
             'code::before': {
               content: 'none',

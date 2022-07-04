@@ -1,4 +1,4 @@
-import Image from "@/components/Image";
+import Image from '@/components/Image'
 export default function SongImage({ alt, src, size }) {
   return (
     <Image
@@ -8,8 +8,7 @@ export default function SongImage({ alt, src, size }) {
       circleSize="w-5 h-5"
       width={size}
       height={size}
-      objectFit="cover"
       className="rounded-full"
     />
-  );
+  )
 }

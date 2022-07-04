@@ -25,8 +25,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   return (
     <>
       <div className="divide-y divide-transparent">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5 ">
-          <h1 className="py-3 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div className="space-y-2 pt-4 md:space-y-4 ">
+          <h1 className="py-3 text-3xl font-extrabold leading-9 tracking-tight text-secondary-900 dark:text-secondary-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
           <div className="relative">
@@ -35,10 +35,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder={t('common:search')}
-              className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+              className="w-full rounded-xl border border-secondary-300 bg-white px-4 py-2 pr-10 text-secondary-900 focus:border-primary-500 focus:ring-primary-500 dark:border-secondary-900 dark:bg-secondary-800 dark:text-secondary-100"
             />
             <svg
-              className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              className="absolute right-3 top-3 h-5 w-5 text-secondary-400 dark:text-secondary-300"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -52,23 +52,27 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               />
             </svg>
           </div>
+          {!filteredBlogPosts.length && (
+            <div className="flex flex-wrap truncate">
+              {t('common:no-search-result')}: "{searchValue}"
+            </div>
+          )}
         </div>
 
-        {!filteredBlogPosts.length && `No articles found for: "${searchValue}"`}
         {displayPosts.map((frontMatter) => {
           const { slug, date, title, summary, tags } = frontMatter
           return (
             <Parallax
               y={15}
               key={slug}
-              className="group rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-300/30 dark:hover:bg-slate-600/30"
+              className="group rounded-xl transition-all duration-300 ease-in-out hover:bg-secondary-300/30 dark:hover:bg-secondary-600/30"
             >
               <ul className="transition-all duration-1000 ease-in-out group-hover:p-4">
                 <li className="py-4">
                   <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">{t('common:pub')}</dt>
-                      <dd className="flex flex-col gap-1 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="flex flex-col gap-1 text-base font-medium leading-6 text-secondary-500 dark:text-secondary-400">
                         <TimeAgo
                           datetime={date}
                           className="text-primary-700 dark:text-primary-500"
@@ -79,18 +83,21 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     </dl>
                     <div className="space-y-3 xl:col-span-3">
                       <div>
-                        <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                          <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                        <h1 className="text-xl font-bold leading-8 tracking-tight">
+                          <Link
+                            href={`/blog/${slug}`}
+                            className="text-secondary-900 dark:text-secondary-100"
+                          >
                             {title}
                           </Link>
-                        </h3>
+                        </h1>
                         <div className="flex flex-wrap">
                           {tags.map((tag) => (
                             <Tag key={tag} text={tag} />
                           ))}
                         </div>
                       </div>
-                      <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                      <div className="prose text-sm text-secondary-500 dark:text-secondary-400">
                         {summary}
                       </div>
                     </div>

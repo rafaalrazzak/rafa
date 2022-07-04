@@ -5,12 +5,15 @@
 @layer base {
   h1 {
     font-family: Plus Jakarta Sans, system-ui, sans-serif;
-		font-weight: 800
-  },
-	p{
+    font-weight: 800;
+  }
+  ,
+  h2,
+  h3,
+  p {
     font-family: Inter, system-ui, sans-serif;
-		font-weight: 300
-	}
+    font-weight: 300;
+  }
 }
 
 .task-list-item::before {
@@ -59,10 +62,8 @@
   stroke-dashoffset: -134;
 }
 
-
-
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600s 0s, color 600s 0s;
 }

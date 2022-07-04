@@ -8,29 +8,29 @@ thumbnail: true
 layout: PostLayout
 ---
 
-
 Operators are constructs that can manipulate the value of an operand.
 
- For example operation 3 + 2 = 5. Here `3` and `2` are operands and `+` are operators.
+For example operation 3 + 2 = 5. Here `3` and `2` are operands and `+` are operators.
 
- Python programming language supports a variety of operators, including:
- - [Arithmetic Operators](#arithmetic-operators)
- - [Comparison (Relational)](#comparison-operators)
- - [Assignment Operators](#assignment-operators)
+Python programming language supports a variety of operators, including:
 
-  ### Arithmetic Operators
+- [Arithmetic Operators](#arithmetic-operators)
+- [Comparison (Relational)](#comparison-operators)
+- [Assignment Operators](#assignment-operators)
 
-  |  Operator|  Example |  Explanation |
-  |  --- |  --- |  --- |
-  |  Sum `+`|  `1 + 3 = 4` |  Adds the value of each operand or number |
-  |  `-`| . subtraction  `4 - 1 = 3` |  Subtracts the value of the operand on the left using the operand on the right |
-  |  Multiplication `*`|  `2 * 4 = 8` |  Multiplying operands/numbers |
-  |  Division `/`|  `10 / 5 = 2` |  To divide the operand on the left use the operand on the right |
-  |  Remaining Divide `%`|  `11 % 2 = 1` |  Gets the remainder of the division of the operand to the left of the operator when divided by the operand to the right of |
-  |  Rank `**`|  `8 ** 2 = 64` |  Raise the operand to the left of the operator by the operand to the right of the operator |
-  |  Integer Division `//`|  `10 // 3 = 3` |  Same as division.  It's just that the number after the comma is omitted |
+### Arithmetic Operators
 
-  Below is an example of using Arithmetic Operators in the Python programming language
+| Operator              | Example                   | Explanation                                                                                                               |
+| --------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Sum `+`               | `1 + 3 = 4`               | Adds the value of each operand or number                                                                                  |
+| `-`                   | . subtraction `4 - 1 = 3` | Subtracts the value of the operand on the left using the operand on the right                                             |
+| Multiplication `*`    | `2 * 4 = 8`               | Multiplying operands/numbers                                                                                              |
+| Division `/`          | `10 / 5 = 2`              | To divide the operand on the left use the operand on the right                                                            |
+| Remaining Divide `%`  | `11 % 2 = 1`              | Gets the remainder of the division of the operand to the left of the operator when divided by the operand to the right of |
+| Rank `**`             | `8 ** 2 = 64`             | Raise the operand to the left of the operator by the operand to the right of the operator                                 |
+| Integer Division `//` | `10 // 3 = 3`             | Same as division. It's just that the number after the comma is omitted                                                    |
+
+Below is an example of using Arithmetic Operators in the Python programming language
 
 ```python:operator.py
   #ARITHMATIC OPERATOR
@@ -75,53 +75,53 @@ Operators are constructs that can manipulate the value of an operand.
   #Round Division
   print(10//3)
   #10 divided by 3 is 3.3333.  Because it is rounded it will produce a value of 3
-  ```
- 
+```
+
 ### Comparison Operators
 
-  Comparison operators are used to compare a value for each operand.
+Comparison operators are used to compare a value for each operand.
 
-  |  Operators |  Example |  Explanation|
-  |  --- |  --- |  --- |
-  |  Equal to `==` |  `1 == 1` |  is True If each operand has the same value, then the condition is true or True.  |
-  |  Not equal to `!=` |  `2 != 2` |  value False Will produce the opposite value of the actual condition.  |
-  |  Not equal to `<>` |  `2 <> 2` |  value False Will produce the opposite value of the actual condition.  |
-  |  Greater than `>` |  `5 > 3` |  is True If the value of the left operand is greater than the value of the right operand, then the condition becomes true.  |
-  |  Smaller than `<` |  `5 < 3` |  is True If the value of the left operand is less than the value of the right operand, then the condition becomes true.  |
-  |  Greater than or equal to `>=` |  `5 >= 3` |  is True If the value of the left operand is greater than the value of the right operand, or equal, then the condition becomes true.  |
-  |  Less than or equal to `<=` |  `5 <= 3` |  is True If the value of the left operand is less than the value of the right operand, or equal, then the condition becomes true.  |
+| Operators                     | Example  | Explanation                                                                                                                         |
+| ----------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Equal to `==`                 | `1 == 1` | is True If each operand has the same value, then the condition is true or True.                                                     |
+| Not equal to `!=`             | `2 != 2` | value False Will produce the opposite value of the actual condition.                                                                |
+| Not equal to `<>`             | `2 <> 2` | value False Will produce the opposite value of the actual condition.                                                                |
+| Greater than `>`              | `5 > 3`  | is True If the value of the left operand is greater than the value of the right operand, then the condition becomes true.           |
+| Smaller than `<`              | `5 < 3`  | is True If the value of the left operand is less than the value of the right operand, then the condition becomes true.              |
+| Greater than or equal to `>=` | `5 >= 3` | is True If the value of the left operand is greater than the value of the right operand, or equal, then the condition becomes true. |
+| Less than or equal to `<=`    | `5 <= 3` | is True If the value of the left operand is less than the value of the right operand, or equal, then the condition becomes true.    |
 
+### Assignment Operators
 
-  ### Assignment Operators
+The assignment operator is used to assign or modify a value to a variable.
 
-  The assignment operator is used to assign or modify a value to a variable.
-
-  |  Operators |  Example |  Explanation |
-  |  --- |  --- |  --- |
-  |  Equal to `=` |  `a = 1` |  Assigns the value on the right to the variable on the left.  |
-  |  Add equal to `+=` |  `a += 2` |  Returns the value of the variable with the value of the variable itself plus the value on the right.  |
-  |  Less equal to `-=` |  `a -= 2` |  Assigns the value of the variable to the value of the variable itself minus the value on the right.  |
-  |  Times equals `*=` |  `a *= 2` |  Returns the value of the variable by the value of the variable itself multiplied by the value on the right.  |
-  |  Divide by `/=` |  `a /= 4` |  Returns the value of the variable by the value of the variable itself divided by the value on the right.  |
-  |  The remainder equals `%=` |  `a %= 3` |  Returns the value of the variable by the value of the variable itself divided by the value on the right.  What is taken later is the rest for him.  |
-  |  Power equals `**=` |  `a **= 3` |  Assigns the value of the variable to the value of the variable itself to the power of the value on the right.  |
-  |  Integer division equals `//=` |  `a //= 3` |  Divide the operator's left operand by the operator's right operand then the result is assigned to the left operand.  |
+| Operators                     | Example   | Explanation                                                                                                                                       |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Equal to `=`                  | `a = 1`   | Assigns the value on the right to the variable on the left.                                                                                       |
+| Add equal to `+=`             | `a += 2`  | Returns the value of the variable with the value of the variable itself plus the value on the right.                                              |
+| Less equal to `-=`            | `a -= 2`  | Assigns the value of the variable to the value of the variable itself minus the value on the right.                                               |
+| Times equals `*=`             | `a *= 2`  | Returns the value of the variable by the value of the variable itself multiplied by the value on the right.                                       |
+| Divide by `/=`                | `a /= 4`  | Returns the value of the variable by the value of the variable itself divided by the value on the right.                                          |
+| The remainder equals `%=`     | `a %= 3`  | Returns the value of the variable by the value of the variable itself divided by the value on the right. What is taken later is the rest for him. |
+| Power equals `**=`            | `a **= 3` | Assigns the value of the variable to the value of the variable itself to the power of the value on the right.                                     |
+| Integer division equals `//=` | `a //= 3` | Divide the operator's left operand by the operator's right operand then the result is assigned to the left operand.                               |
 
 ### Priority Execution Operators in Python
-  Of all the operators above, each has a priority order which will be carried out first priority first, and so on until the last priority.
 
-  |  Operators |  Description |
-  |  --------------------------------- |  ------------------------- |
-  |  `**` |  Arithmetic |
-  |  `~, +, -` |  Bitwise |
-  |  `*, /, %, //` |  Arithmetic |
-  |  `+, -` |  Arithmetic |
-  |  `>>, <<` |  Bitwise |
-  |  `&` |  Bitwise |
-  |  `^` |  Bitwise |
-  |  `<=, <, >, >=` |  Comparison |
-  |  `<> , ==, !=` |  Comparison |
-  |  `=, %=, /=, //=, -=, +=, *=, **=` |  Assignment |
-  |  `is, is not` |  Identity |
-  |  `in, not in` |  Membership |
-  |  `not, or, and` |  Logic |
+Of all the operators above, each has a priority order which will be carried out first priority first, and so on until the last priority.
+
+| Operators                         | Description |
+| --------------------------------- | ----------- |
+| `**`                              | Arithmetic  |
+| `~, +, -`                         | Bitwise     |
+| `*, /, %, //`                     | Arithmetic  |
+| `+, -`                            | Arithmetic  |
+| `>>, <<`                          | Bitwise     |
+| `&`                               | Bitwise     |
+| `^`                               | Bitwise     |
+| `<=, <, >, >=`                    | Comparison  |
+| `<> , ==, !=`                     | Comparison  |
+| `=, %=, /=, //=, -=, +=, *=, **=` | Assignment  |
+| `is, is not`                      | Identity    |
+| `in, not in`                      | Membership  |
+| `not, or, and`                    | Logic       |

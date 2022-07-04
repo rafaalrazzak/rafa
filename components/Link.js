@@ -6,7 +6,7 @@ import React, { Children } from 'react'
 const ActiveLink = ({ children, activeClassName, ...props }) => {
   const { asPath } = useRouter()
   const child = Children.only(children)
-  const childClassName = child.props.className && 'cursor-pointer' || ''
+  const childClassName = (child.props.className && 'cursor-pointer') || ''
 
   const className =
     asPath === props.href || asPath === props.as
@@ -16,7 +16,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
   return (
     <Link {...props}>
       {React.cloneElement(child, {
-        className: className && 'cursor-pointer' || null,
+        className: (className && 'cursor-pointer') || null,
       })}
     </Link>
   )

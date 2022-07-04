@@ -1,37 +1,36 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import useTranslation from "next-translate/useTranslation";
-import { FaGithub } from "react-icons/fa";
-import TimeAgo from "@/components/TimeAgo";
-import ReadTime from "@/components/ReadTime";
-import Link from "@/components/Link";
-import PageTitle from "@/components/PageTitle";
-import SectionContainer from "@/components/SectionContainer";
-import Author from "@/components/Author";
-import Image from "@/components/Image";
-import { BlogSEO } from "@/components/SEO";
-import Tag from "@/components/Tag";
-import siteMetadata from "@/data/siteMetadata";
-import formatDate from "@/lib/utils/formatDate";
-import titleCase from "@/lib/utils/titleCase";
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
+import useTranslation from 'next-translate/useTranslation'
+import { FaGithub } from 'react-icons/fa'
+import TimeAgo from '@/components/TimeAgo'
+import ReadTime from '@/components/ReadTime'
+import Link from '@/components/Link'
+import PageTitle from '@/components/PageTitle'
+import SectionContainer from '@/components/SectionContainer'
+import Author from '@/components/Author'
+import CloudinaryImg from '@/components/CloudinaryImg'
+import { BlogSEO } from '@/components/SEO'
+import Tag from '@/components/Tag'
+import siteMetadata from '@/data/siteMetadata'
+import formatDate from '@/lib/utils/formatDate'
+import titleCase from '@/lib/utils/titleCase'
 
-const editUrl = (fileName) =>
-  `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`;
+const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
 
 function useIsScrollTop() {
-  const [isTop, setIsTop] = useState(true);
+  const [isTop, setIsTop] = useState(true)
   useEffect(() => {
     function onScroll() {
-      setIsTop(window.scrollY <= 255);
+      setIsTop(window.scrollY <= 255)
     }
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
 
-  return isTop;
+  return isTop
 }
 
 export default function PostLayout({
@@ -42,28 +41,25 @@ export default function PostLayout({
   availableLocales,
   children,
 }) {
-  const { slug, fileName, date, title, tags, readingTime, thumbnail } =
-    frontMatter;
-  const blogImage = `https://res.cloudinary.com/raf-ar/image/upload/v1650957837/blog/${tags[0]}.jpg`;
-  const roundedRead = Math.round(readingTime);
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+  const { slug, fileName, date, title, tags, readingTime, thumbnail } = frontMatter
+  const blogImage = `v1650957837/blog/${tags[0]}.jpg`
+  const roundedRead = Math.round(readingTime)
+  const { locale } = useRouter()
+  const { t } = useTranslation()
   function SideBar() {
-    const isTop = useIsScrollTop();
+    const isTop = useIsScrollTop()
     return (
       <div
         className={`${
-          isTop
-            ? "xl:top-0 xl:flex xl:flex-col "
-            : "xl:sticky xl:top-12 xl:flex xl:flex-col"
+          isTop ? 'xl:top-0 xl:flex xl:flex-col ' : 'xl:sticky xl:top-12 xl:flex xl:flex-col'
         } hidden`}
       >
         <div
           className={`${
-            isTop ? "mt-0" : "mt-12"
-          } pb-6 transition-all duration-700 xl:border-b xl:border-gray-200 xl:dark:border-gray-700`}
+            isTop ? 'mt-0' : 'mt-12'
+          } pb-6 transition-all duration-700 xl:border-b xl:border-secondary-200 xl:dark:border-secondary-700`}
         >
-          <dt className="sr-only">{t("common:authors")}</dt>
+          <dt className="sr-only">{t('common:authors')}</dt>
           <dd>
             <Author detail={authorDetails} />
           </dd>
@@ -71,7 +67,7 @@ export default function PostLayout({
         <div className="leading-5xl:col-start-1 divide-transparent text-sm font-medium xl:row-start-2 xl:divide-y">
           {tags && (
             <div className="xl:pt-4">
-              <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+              <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
                 Tags
               </h2>
               <div className="flex flex-wrap">
@@ -85,8 +81,8 @@ export default function PostLayout({
             <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
               {prev && (
                 <div>
-                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                    {t("common:preva")}
+                  <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
+                    {t('common:preva')}
                   </h2>
                   <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                     <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
@@ -95,8 +91,8 @@ export default function PostLayout({
               )}
               {next && (
                 <div>
-                  <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                    {t("common:nexta")}
+                  <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
+                    {t('common:nexta')}
                   </h2>
                   <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                     <Link href={`/blog/${next.slug}`}>{next.title}</Link>
@@ -110,10 +106,10 @@ export default function PostLayout({
           href="/blog"
           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
         >
-          &larr; {t("common:back")}
+          &larr; {t('common:back')}
         </Link>
       </div>
-    );
+    )
   }
 
   return (
@@ -127,20 +123,17 @@ export default function PostLayout({
         {...frontMatter}
       />
       <article>
-        <div className="w-full divide-transparent xl:divide-y">
+        <div className="divide-transparent xl:divide-y">
           <header className="pt-6 xl:pb-6">
             <div className="flex justify-center space-y-1 text-center">
               <dl className="space-y-10">
-                <dt className="sr-only">{t("common:pub")}</dt>
-                <dd className="flex items-center justify-center divide-x-2 divide-gray-500 text-sm font-medium leading-6 text-gray-500 dark:divide-gray-400 dark:text-gray-400">
+                <dt className="sr-only">{t('common:pub')}</dt>
+                <dd className="flex items-center justify-center divide-x-2 divide-secondary-500 text-sm leading-6 text-secondary-500 dark:divide-secondary-400 dark:text-secondary-400">
                   <TimeAgo datetime={date} className="px-2" locale={locale} />
                   <time className="px-2" dateTime={date}>
                     {formatDate(date, locale)}
                   </time>
-                  <ReadTime
-                    time={roundedRead}
-                    className="hidden px-2 md:flex"
-                  />
+                  <ReadTime time={roundedRead} className="hidden px-2 md:flex" />
                 </dd>
               </dl>
             </div>
@@ -148,45 +141,37 @@ export default function PostLayout({
               <PageTitle className="py-2">{title}</PageTitle>
               <ReadTime
                 time={roundedRead}
-                className="dark:text-gray-40 flex items-center justify-center divide-x-2 divide-gray-500 text-sm font-medium leading-6 text-gray-500 dark:divide-gray-400 md:hidden"
+                className="dark:text-secondary-40 flex items-center justify-center divide-x-2 divide-secondary-500 text-sm font-medium leading-6 text-secondary-500 dark:divide-secondary-400 md:hidden"
               />
             </div>
           </header>
           <div
             className="divide-y divide-transparent pb-8 xl:relative xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
-            style={{ gridTemplateRows: "auto 1fr" }}
+            style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="pt-6 pb-10 xl:hidden xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
-              <dt className="sr-only">{t("common:authors")}</dt>
+            <div className="pt-6 pb-10 xl:hidden xl:border-b xl:border-secondary-200 xl:pt-11 xl:dark:border-secondary-700">
+              <dt className="sr-only">{t('common:authors')}</dt>
               <dd>
                 <Author detail={authorDetails} />
               </dd>
             </div>
             <SideBar />
 
-            <div className=" divide-y divide-transparent xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="divide-y divide-transparent xl:col-span-3 xl:row-span-2 xl:pb-0">
               {thumbnail && (
-                <div className="flex w-full justify-center">
-                  <Image
+                <div className="flex w-full justify-center overflow-hidden rounded-xl">
+                  <CloudinaryImg
                     alt={`${title} - ${titleCase(`${tags[0]}`)}`}
-                    width="900"
-                    height="500"
-                    src={blogImage}
-                    className="rounded-lg"
+                    id={blogImage}
                     objectFit="cover"
                   />
                 </div>
               )}
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
-                {children}
-              </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link
-                  href={editUrl(fileName)}
-                  className="flex items-center hover:text-primary-500"
-                >
-                  <FaGithub size={20} className="mr-3" />
-                  {t("common:github")}
+              <div className="prose pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="inline-flex items-center pt-6 pb-6 text-sm text-secondary-700 dark:text-secondary-300">
+                <Link href={editUrl(fileName)} className="flex space-x-2 hover:text-primary-500">
+                  <FaGithub size={20} />
+                  <span>{t('common:github')}</span>
                 </Link>
               </div>
             </div>
@@ -194,7 +179,7 @@ export default function PostLayout({
               <div className="leading-5xl col-start-1 divide-transparent text-sm font-medium">
                 {tags && (
                   <div className="pt-4 xl:pt-8">
-                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                    <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
                       Tags
                     </h2>
                     <div className="flex flex-wrap">
@@ -209,8 +194,8 @@ export default function PostLayout({
                   <div className="flex justify-between py-4">
                     {prev && (
                       <div>
-                        <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          {t("common:preva")}
+                        <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
+                          {t('common:preva')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
@@ -219,8 +204,8 @@ export default function PostLayout({
                     )}
                     {next && (
                       <div className="items-end text-right">
-                        <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
-                          {t("common:nexta")}
+                        <h2 className="text-xs uppercase tracking-wide text-secondary-500 dark:text-secondary-400">
+                          {t('common:nexta')}
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
@@ -235,7 +220,7 @@ export default function PostLayout({
                   href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; {t("common:back")}
+                  &larr; {t('common:back')}
                 </Link>
               </div>
             </footer>
@@ -243,5 +228,5 @@ export default function PostLayout({
         </div>
       </article>
     </SectionContainer>
-  );
+  )
 }

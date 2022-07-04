@@ -7,11 +7,11 @@
 
 /* Code title styles */
 .remark-code-title {
-  @apply rounded-t border-b border-gray-400 bg-slate-700 px-5 py-3 font-mono text-sm font-bold text-gray-300;
+  @apply rounded-t-xl border-b border-secondary-400 bg-secondary-700 px-5 py-3 font-mono text-sm font-bold text-secondary-300;
 }
 
 .remark-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+  @apply mt-0 rounded-b-xl rounded-t-none;
 }
 
 /* Code block styles */
@@ -24,19 +24,19 @@
 }
 
 .code-line.inserted {
-  @apply  bg-opacity-20 bg-green-500;
+  @apply bg-green-500 bg-opacity-20;
 }
 
 .code-line.deleted {
-  @apply  bg-opacity-20 bg-red-500;
+  @apply bg-red-500 bg-opacity-20;
 }
 
 .highlight-line {
-  @apply -mx-4 border-l-4 border-primary-500  bg-gray-700 bg-opacity-50;
+  @apply -mx-4 border-l-4 border-primary-500  bg-secondary-700 bg-opacity-50;
 }
 
 .line-number::before {
-  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-secondary-400;
   content: attr(line);
 }
 

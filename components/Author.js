@@ -1,44 +1,26 @@
-import useTranslation from "next-translate/useTranslation";
-import { FaTwitter } from "react-icons/fa";
-import Image from "@/components/Image";
-import Link from "@/components/Link";
-import { convertImage, toBase64 } from "@/lib/utils/imageBlur";
+import useTranslation from 'next-translate/useTranslation'
+import { FaTwitter } from 'react-icons/fa'
+import CloudinaryImg from '@/components/CloudinaryImg'
+import Link from '@/components/Link'
 
 export default function Author({ detail }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <ul className="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-4">
       {detail.map((author) => (
-        <li
-          className="flex items-center justify-center space-x-2"
-          key={author.name}
-        >
-          <Image
-            src={`https://res.cloudinary.com/raf-ar/image/upload/v1651370642/blog/avatars/${author.name.toLowerCase()}.jpg`}
-            width="36px"
-            height="36px"
-            alt={author.name}
-            type="circle"
-            circleSize="w-9 h-9"
-            className="h-10 w-10 rounded-full"
-            placeholder="blur"
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              convertImage(
-                `https://res.cloudinary.com/raf-ar/image/upload/v1651370642/blog/avatars/${author.name.toLowerCase()}.jpg`,
-                10,
-                10
-              )
-            )}`}
-          />
+        <li className="flex items-center justify-center space-x-2" key={author.name}>
+          <div className="w-8 overflow-hidden rounded-full">
+            <CloudinaryImg
+              id={`v1651370642/blog/avatars/${author.name.toLowerCase()}.jpg`}
+              alt={author.name}
+            />
+          </div>
           <dl className="whitespace-nowrap text-sm font-medium leading-5">
-            <dt className="sr-only">{t("common:name")}</dt>
+            <dt className="sr-only">{t('common:name')}</dt>
             <dd>
-              <Link
-                className="text-secondary-900 transition hover:text-primary-500 dark:text-secondary-100 dark:hover:text-primary-400"
-                href="/about"
-              >
+              <h3 className="text-secondary-900 transition dark:text-secondary-100">
                 {author.name}
-              </Link>
+              </h3>
             </dd>
             <dt className="sr-only">Twitter</dt>
             <dd>
@@ -56,5 +38,5 @@ export default function Author({ detail }) {
         </li>
       ))}
     </ul>
-  );
+  )
 }

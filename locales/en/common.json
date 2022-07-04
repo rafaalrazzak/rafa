@@ -23,5 +23,6 @@
   "minutes": "minutes",
   "to": "to",
   "read": "read",
-  "latest-article": "Latest article"
+  "latest-article": "Latest article",
+  "no-search-result": "No articles found for"
 }

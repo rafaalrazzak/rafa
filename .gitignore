@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/.husky/
+/.swc/
+
 
 # testing
 /coverage
@@ -36,3 +39,6 @@ yarn-error.log*
 .env.production.local
 .env
 .env.staging
+
+
+.gitpod.yml
