@@ -24,7 +24,7 @@ export const MDXComponents = {
       />
     )
   },
-  wrapper: ({ components, layout, ...rest }) => {
+  wrapper: ({  layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />
   },
