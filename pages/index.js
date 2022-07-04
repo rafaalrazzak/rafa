@@ -12,8 +12,8 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 const Hero = dynamic(() => import('@/components/Hero'), { ssr: false })
-const Card = dynamic(() => import('@/components/Card'), { ssr: true })
-const Track = dynamic(() => import('@/components/Spotify/Track'), { ssr: true })
+const Card = dynamic(() => import('@/components/Card'), { ssr: false })
+const Track = dynamic(() => import('@/components/Spotify/Track'), { ssr: false })
 
 const MAX_DISPLAY = 3
 
