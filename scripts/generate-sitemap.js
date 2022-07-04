@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'
+const dynamic = require('next/dynamic')
 const siteMetadata = require('../data/siteMetadata')
 const i18nConfig = require('../i18n.json')
 
