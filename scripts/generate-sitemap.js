@@ -6,10 +6,8 @@ const fs = dynamic(() => import('fs'), { ssr: false })
 const globby = dynamic(() => import('globby'), { ssr: false })
 const prettier = dynamic(() => import('prettier'), { ssr: false })
 
-
-
 ;(async () => {
-  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
+  const prettierConfig = await prettier.resolveConfig('./prettier.config.js')
   const pages = await globby([
     'pages/*.js',
     'data/blog/**/*.mdx',
