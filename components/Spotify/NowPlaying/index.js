@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import useTranslation from 'next-translate/useTranslation'
 import { FaSpotify, FaPauseCircle } from 'react-icons/fa'
 import MusicEqualizer from './MusicEqualizer'
-import SongImage from './SongImage'
+import Image from '@/components/Image'
 import Link from '@/components/Link'
 import fetcher from '@/lib/fetcher'
 export default function NowPlaying() {
@@ -11,7 +11,7 @@ export default function NowPlaying() {
   return (
     <div className="flex max-w-lg flex-wrap items-center justify-center space-x-2 transition-all sm:gap-2 sm:space-x-1 md:space-x-0">
       {data?.isPlaying && data?.songUrl && (
-        <SongImage src={data.songImage} alt={`${data.title} - ${data.artist}`} size={20} />
+        <Image src={data.songImage} alt={`${data.title} - ${data.artist}`} width={20} height={20} className="rounded-full" />
       )}
       {data?.isPause && data?.songUrl && <FaPauseCircle className="text-spotify" />}
       {data?.isPlaying && data?.songUrl && <MusicEqualizer />}
