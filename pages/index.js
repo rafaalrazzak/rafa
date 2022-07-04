@@ -5,9 +5,10 @@ import Parallax from '@/components/motion/Parallax'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
+import TimeAgo from '@/components/TimeAgo'
+import View from '@/components/View'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import TimeAgo from '@/components/TimeAgo'
 import formatDate from '@/lib/utils/formatDate'
 
 const Hero = dynamic(() => import('@/components/Hero'), { ssr: false })
@@ -88,6 +89,7 @@ export default function Home({ posts, locale, availableLocales }) {
                             <dl>
                               <dt className="sr-only">{t('common:pub')}</dt>
                               <dd className="flex flex-col gap-1 text-base font-medium leading-6 text-secondary-500 dark:text-secondary-400">
+                                <View locale={locale} value={6666} />
                                 <TimeAgo
                                   datetime={date}
                                   locale={locale}

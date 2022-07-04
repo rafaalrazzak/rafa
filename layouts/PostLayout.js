@@ -14,6 +14,8 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import titleCase from '@/lib/utils/titleCase'
+import numberStringFormat from '@/lib/utils/numberStringFormat'
+import View from '@/components/View'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
 
@@ -126,10 +128,11 @@ export default function PostLayout({
         <div className="divide-transparent xl:divide-y">
           <header className="pt-6 xl:pb-6">
             <div className="flex justify-center space-y-1 text-center">
-              <dl className="space-y-10">
+              <dl>
                 <dt className="sr-only">{t('common:pub')}</dt>
                 <dd className="flex items-center justify-center divide-x-2 divide-secondary-500 text-sm leading-6 text-secondary-500 dark:divide-secondary-400 dark:text-secondary-400">
-                  <TimeAgo datetime={date} className="px-2" locale={locale} />
+                  {/* <TimeAgo datetime={date} className="px-2" locale={locale} /> */}
+                  <View locale={locale} value={6666} className="px-2" />
                   <time className="px-2" dateTime={date}>
                     {formatDate(date, locale)}
                   </time>
