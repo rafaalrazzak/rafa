@@ -1,13 +1,13 @@
 const dynamic = require('next/dynamic')
+const fs = dynamic(() => import('fs'), { suspense: true })
+const globby = dynamic(() => import('globby'), { suspense: true })
+const prettier = dynamic(() => import('prettier'), { suspense: true })
 const siteMetadata = require('../data/siteMetadata')
 const i18nConfig = require('../i18n.json')
 
-const fs = dynamic(() => import('fs'), { ssr: false })
-const globby = dynamic(() => import('globby'), { ssr: false })
-// const prettier = dynamic(() => import('prettier'), { ssr: false })
 
 ;(async () => {
-  // const prettierConfig = await prettier.resolveConfig('./prettier.config.js')
+  const prettierConfig = await prettier.resolveConfig('./prettier.config.js')
   const pages = await globby([
     'pages/*.js',
     'data/blog/**/*.mdx',
@@ -118,11 +118,11 @@ const globby = dynamic(() => import('globby'), { ssr: false })
         </urlset>
     `
 
-  // const formatted = prettier.format(sitemap, {
-  //   ...prettierConfig,
-  //   parser: 'html',
-  // })
+  const formatted = prettier.format(sitemap, {
+    ...prettierConfig,
+    parser: 'html',
+  })
 
   // eslint-disable-next-line no-sync
-  fs.writeFileSync('public/sitemap.xml', sitemap)
+  fs.writeFileSync('public/sitemap.xml', formatted)
 })()
