@@ -16,7 +16,6 @@ const Footer = dynamic(() => import('./Footer'), {
   ssr: false,
 })
 
-
 const LayoutWrapper = ({ children }) => {
   return (
     <>
