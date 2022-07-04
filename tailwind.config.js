@@ -57,9 +57,6 @@ module.exports = {
           950: '#170a2d',
           1000: '#120724',
         },
-        green: colors.emerald,
-        yellow: colors.amber,
-        purple: colors.violet,
         spotify: '#1DB954',
       },
       hueRotate: {

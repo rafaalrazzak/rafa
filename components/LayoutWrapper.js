@@ -1,9 +1,21 @@
 /* eslint-disable jsx-a11y/no-onchange */
+import dynamic from 'next/dynamic'
 import SectionContainer from './SectionContainer'
-import Header from './Header'
-import Footer from './Footer'
-import LeftDarkGradient from './background/left-dark-gradient.svg'
-import RightDarkGradient from './background/right-dark-gradient.svg'
+
+const LeftDarkGradient = dynamic(() => import('./background/left-dark-gradient.svg'), {
+  ssr: false,
+})
+const RightDarkGradient = dynamic(() => import('./background/right-dark-gradient.svg'), {
+  ssr: false,
+})
+
+const Header = dynamic(() => import('./Header'), {
+  ssr: false,
+})
+const Footer = dynamic(() => import('./Footer'), {
+  ssr: false,
+})
+
 
 const LayoutWrapper = ({ children }) => {
   return (

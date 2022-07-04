@@ -93,7 +93,9 @@ export default function Home({ posts, locale, availableLocales }) {
                                   locale={locale}
                                   className="text-primary-500"
                                 />
-                                <time dateTime={date}>{formatDate(date, locale)}</time>
+                                <time className="text-sm" dateTime={date}>
+                                  {formatDate(date, locale)}
+                                </time>
                               </dd>
                             </dl>
 
