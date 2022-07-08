@@ -11,7 +11,13 @@ export default function NowPlaying() {
   return (
     <div className="flex max-w-lg flex-wrap items-center justify-center space-x-2 transition-all sm:gap-2 sm:space-x-1 md:space-x-0">
       {data?.isPlaying && data?.songUrl && (
-        <Image src={data.songImage} alt={`${data.title} - ${data.artist}`} width={20} height={20} className="rounded-full" />
+        <Image
+          src={data.songImage}
+          alt={`${data.title} - ${data.artist}`}
+          width={20}
+          height={20}
+          className="rounded-full"
+        />
       )}
       {data?.isPause && data?.songUrl && <FaPauseCircle className="text-spotify" />}
       {data?.isPlaying && data?.songUrl && <MusicEqualizer />}

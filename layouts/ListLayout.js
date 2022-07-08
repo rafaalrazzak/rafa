@@ -74,7 +74,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <dl>
                       <dt className="sr-only">{t('common:pub')}</dt>
                       <dd className="flex flex-col gap-1 text-base font-medium leading-6 text-secondary-500 dark:text-secondary-400">
-                      <View locale={locale} value={666} />
+                        <View locale={locale} value={666} />
                         <TimeAgo
                           datetime={date}
                           className="text-primary-700 dark:text-primary-500"

@@ -3,17 +3,17 @@ import dynamic from 'next/dynamic'
 import SectionContainer from './SectionContainer'
 
 const LeftDarkGradient = dynamic(() => import('./background/left-dark-gradient.svg'), {
-  ssr: false,
+  ssr: true,
 })
 const RightDarkGradient = dynamic(() => import('./background/right-dark-gradient.svg'), {
-  ssr: false,
+  ssr: true,
 })
 
 const Header = dynamic(() => import('./Header'), {
-  ssr: false,
+  ssr: true,
 })
 const Footer = dynamic(() => import('./Footer'), {
-  ssr: false,
+  ssr: true,
 })
 
 const LayoutWrapper = ({ children }) => {

@@ -22,16 +22,6 @@ export default function Footer() {
             href={`https://twitter.com/${siteMetadata.twitter}`}
             size={5}
           />
-          <SocialIcon
-            kind="instagram"
-            href={`https://instagram.com/${siteMetadata.instagram}`}
-            size={5}
-          />
-          <SocialIcon
-            kind="twitter"
-            href={`https://twitter.com/${siteMetadata.twitter}`}
-            size={5}
-          />
         </div>
         <div className="mb-3 flex">
           <NowPlaying />

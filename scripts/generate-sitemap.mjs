@@ -1,11 +1,8 @@
-const dynamic = require('next/dynamic')
-const fs = dynamic(() => import('fs'), { suspense: true })
-const globby = dynamic(() => import('globby'), { suspense: true })
-const prettier = dynamic(() => import('prettier'), { suspense: true })
-const siteMetadata = require('../data/siteMetadata')
-const i18nConfig = require('../i18n.json')
-
-
+import fs from 'fs'
+import globby from 'globby'
+import prettier from 'prettier'
+import siteMetadata from '../data/siteMetadata'
+import i18nConfig from '../i18n.json'
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./prettier.config.js')
   const pages = await globby([

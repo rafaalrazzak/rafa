@@ -1,8 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
+import dynamic from 'next/dynamic'
 import { RiArticleLine } from 'react-icons/ri'
 import Hero from '@/components/Hero'
 import Card from '@/components/Card'
-import Track from '@/components/Spotify/Track'
 import Parallax from '@/components/motion/Parallax'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
@@ -13,6 +13,9 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
+const Track = dynamic(() => import('@/components/Spotify/Track'), {
+  ssr: true,
+})
 const MAX_DISPLAY = 3
 
 export async function getStaticProps({ locale, defaultLocale, locales }) {

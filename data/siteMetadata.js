@@ -22,4 +22,4 @@ const siteMetadata = {
   locale: 'en-US',
 }
 
-module.exports = siteMetadata
+export default siteMetadata
