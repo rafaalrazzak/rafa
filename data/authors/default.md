@@ -9,7 +9,7 @@ github: rafaalrazzak
 ---
 
 <h1 align="center"> Hi 👋, I'm Rafa Al Razzak </h1>
-<h3 align="center"> I am a student at Al-Asiyah Vocational School </h3>
+<h3 align="center"> I am a Full Stack Web Developer </h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=rafaalrazzak&label=Profile%20views&color=0e75b6&style=flat" alt="rafaalrazzak" /> </p>
 
